@@ -1,6 +1,7 @@
 const salutContainer = document.querySelector('.salut');
 const timeContainer = document.querySelector('.time');
 const dayContainer = document.querySelector('.day');
+const spinnerLoading = document.querySelector('.loading');
 
 const showDay = () => {
   const date = new Date();
@@ -38,5 +39,10 @@ const showSalut = () => {
 }
 
 showDay();
+
+setTimeout(()=>{
+spinnerLoading.remove();
+}, 1000)
+
 setInterval(showTime, 1000)
 showSalut();
